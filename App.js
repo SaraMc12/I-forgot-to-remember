@@ -14,7 +14,7 @@ export default function App() {
           style={{
             backgroundColor: "dodgerblue",
             width: "50%",
-            height: 70,
+            height: 80,
           }}
         >
           <Text
