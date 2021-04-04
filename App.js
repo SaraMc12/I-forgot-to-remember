@@ -1,13 +1,36 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import {
+  useDimensions,
+  useDeviceOrientation,
+} from "@react-native-community/hooks";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app Hey yall!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView>
+      <View style={styles.container}>
+        <View
+          style={{
+            backgroundColor: "dodgerblue",
+            width: "50%",
+            height: 70,
+          }}
+        >
+          <Text
+            style={{
+              color: "tomato",
+              fontWeight: "bold",
+              textAlign: "center",
+              // paddingTop: "10%",
+            }}
+          >
+            Hey there!
+          </Text>
+        </View>
+        <StatusBar style="auto" />
+      </View>
+    </SafeAreaView>
   );
 }
 
@@ -15,7 +38,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    // alignItems: "center",
+    // justifyContent: "center",
   },
 });
